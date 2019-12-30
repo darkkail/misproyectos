@@ -94,7 +94,7 @@ if(isset ($_POST['insert'])){
 					<td><?php echo $id; ?></td>
 					<td><?php echo $rut; ?></td>
 					<td><?php echo $pass; ?></td>
-					<td><?php echo $condicion; ?></td>
+					<td><?php print_r ($condicion); ?></td>
 					<td><?php echo $intentos; ?></td>
 					<td><?php echo $estado; ?></td>
 					<td><a href="formulario.php?editar=<?php echo $id; ?>">Editar</a></td>
@@ -103,7 +103,15 @@ if(isset ($_POST['insert'])){
 				</tr>	
 					<?php } ?>
 			</table>
-
+			</div>
+			<!-- codigo en PHP para los botones de editar y borrar -->
+			<?php
+				if (isset($_GET['editar'])){
+					include("editar.php");					
+					
+				}
+			
+			?>
 
 		
 	</body>
